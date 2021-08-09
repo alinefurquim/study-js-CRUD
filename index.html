@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="script.js" defer></script>
+    <title>CRUD</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de cliente</h1>
+    </header>
+    <main>
+        <button type="button">Cadastrar Clientes</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@gmail.com</td>
+                    <td>(11) 99999.0000</td> 
+                    <td>Anapolis</td>
+                    <td>
+                        <button type="button">
+                            Editar
+                        </button>
+                        <button type="button">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <div>
+                <header>
+                    <h2>Novo Cliente</h2>
+                    <span>&#10006</span>
+                </header>
+                <form>
+                    <input type="text" placeholder="Nome do cliente">
+                    <input type="email" placeholder="email do cliente">
+                    <input type="text" placeholder="Número do celular">
+                    <input type="text" placeholder="Cidade">
+                </form>
+                <footer>
+                    <button>Salvar</button>
+                    <button>Cancelar</button>
+                </footer>
+            </div>            
+        </div>
+    </main>
+</body>
+</html>
