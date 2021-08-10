@@ -18,7 +18,7 @@
         <h1 class="header-title">Cadastro de cliente</h1>
     </header>
     <main>
-        <button type="button">Cadastrar Clientes</button>
+        <button type="button" class=" button blue mobile">Cadastrar Clientes</button>
         <table>
             <thead>
                 <tr>
@@ -36,9 +36,9 @@
                     <td>(11) 99999.0000</td> 
                     <td>Anapolis</td>
                     <td>
-                        <button type="button">
+                        <button class="button green" type="button">
                             Editar
-                        </button>
+                        </button class="button red">
                         <button type="button">
                             Excluir
                         </button>
@@ -46,21 +46,21 @@
                 </tr>
             </tbody>
         </table>
-        <div>
-            <div>
-                <header>
+        <div class="modal">
+            <div class="modal-content">
+                <header class="modal-header">
                     <h2>Novo Cliente</h2>
-                    <span>&#10006</span>
+                    <span class="modal-close">&#10006</span>
                 </header>
-                <form>
-                    <input type="text" placeholder="Nome do cliente">
-                    <input type="email" placeholder="email do cliente">
-                    <input type="text" placeholder="Número do celular">
-                    <input type="text" placeholder="Cidade">
+                <form class="modal-form">
+                    <input type="text" class="modal-field" placeholder="Nome do cliente">
+                    <input type="email" class="modal-field" placeholder="email do cliente">
+                    <input type="text" class="modal-field" placeholder="Número do celular">
+                    <input type="text" class="modal-field" placeholder="Cidade">
                 </form>
-                <footer>
-                    <button>Salvar</button>
-                    <button>Cancelar</button>
+                <footer class="modal-footer">
+                    <button class="button green">Salvar</button>
+                    <button class="button blue">Cancelar</button>
                 </footer>
             </div>            
         </div>
