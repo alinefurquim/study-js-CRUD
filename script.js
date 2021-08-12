@@ -53,9 +53,44 @@ const saveClient = () => {
             cidade: document.getElementById('cidade').value,
         }
         createClient(client)
-        clearFields()
+        updateTable()
+        //clearFields()
+        closeModal()
     }
 }
+
+const createRow = (client) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+        <td>${client.nome}</td>
+        <td>${client.email}</td>
+        <td>${client.celular}</td> 
+        <td>${client.cidade}</td>
+        <td>
+            <button class="button green" type="button">
+                Editar
+            </button >
+            <button class="button red" type="button">
+                Excluir
+            </button>
+        </td>
+    `
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+}
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#tableClient>tbody tr')
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+const updateTable = () => {
+    const updateTableClient  = readClient()
+    clearTable()
+    updateTableClient.forEach(createRow)
+}
+    
+
+updateTable()
 
 document.getElementById('buttonRegisterClient')
     .addEventListener('click', openModal)
